@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_guardar"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_guardar" />
+            android:icon="@drawable/ic_save_dark_24dp"
+            android:title="@string/menu_guardar"
+            app:itemTextAppearance="@style/MenuFontVG5000"
+
+            />
         <item
             android:id="@+id/nav_recuperar"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_restore_dark_24dp"
             android:title="@string/menu_recuperar" />
         <item
             android:id="@+id/nav_contáctanos"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_whatsapp"
             android:title="@string/menu_contáctanos" />
 
     </group>

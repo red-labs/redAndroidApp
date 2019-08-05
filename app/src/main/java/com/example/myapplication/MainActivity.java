@@ -22,9 +22,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +35,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String url = "https://www.redmedellin.com/";
-
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }
-        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -50,6 +42,26 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        Button buttonDeposit = findViewById(R.id.buttonDeposit);
+            buttonDeposit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent depositarIntent = new Intent(getApplicationContext(), Depositar.class);
+                    startActivity(depositarIntent);
+                }
+            });
+        Button whatsappButton = findViewById(R.id.whatsappButton);
+            whatsappButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String url = "https://wa.me/573135581129";
+
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+            });
     }
 
     @Override
@@ -94,8 +106,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_guardar) {
+           Intent guardarIntent = new Intent(getApplicationContext(), Guardar.class );
+           startActivity(guardarIntent);
 
         } else if (id == R.id.nav_recuperar) {
+            Intent recuperarIntent = new Intent(getApplicationContext(), Recuperar.class);
+            startActivity(recuperarIntent);
 
         } else if (id == R.id.nav_contáctanos) {
             String url = "https://wa.me/573135581129";
