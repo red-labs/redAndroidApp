@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".Depositar">
 
+
+    <TextView
+        android:id="@+id/backButtonTextDepositar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+        android:fontFamily="@font/vg5000"
+        android:text=" Atras"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitleDepositar"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/vg5000"
+        android:gravity="start"
+        android:text="Tu Codigo"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textDark"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

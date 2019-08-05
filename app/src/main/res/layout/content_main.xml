@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:background="@color/backgroundPrimary">
 
     <TextView
         android:id="@+id/textViewBalance"
@@ -17,7 +18,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/helvetica"
-        android:text="30.000"
+        android:text="$30.000"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
         android:textSize="48sp"
@@ -78,11 +79,9 @@
 
     <Button
         android:id="@+id/whatsappButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/whatsapp_button"
         android:drawableRight="@drawable/ic_whatsapp"
@@ -90,8 +89,8 @@
         android:padding="16sp"
         android:text="Ayudar  "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/buttonDeposit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

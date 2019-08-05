@@ -2,16 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
+    android:id="@+id/headerBackground"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
     app:itemTextAppearance="@style/MenuFontVG5000">
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewLogoHeader"
         android:layout_width="203dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"

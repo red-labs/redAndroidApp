@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-
+    /* logic to make the navigation drawer work  */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        /* Button that opens the Depositar activity where the QR code will be displayed */
         Button buttonDeposit = findViewById(R.id.buttonDeposit);
             buttonDeposit.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -51,7 +52,9 @@ public class MainActivity extends AppCompatActivity
                     startActivity(depositarIntent);
                 }
             });
-        Button whatsappButton = findViewById(R.id.whatsappButton);
+
+        /* Opens a new WhatsApp message with red_'s business account */
+            Button whatsappButton = findViewById(R.id.whatsappButton);
             whatsappButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -102,7 +105,13 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
+        /* Handle navigation view item clicks here.
+         *      First opens Guardar activity
+         *      Second opens Recuperar activity
+         *      Third again opens a new WhatsApp message with red_'s business account
+          * */
+
         int id = item.getItemId();
 
         if (id == R.id.nav_guardar) {

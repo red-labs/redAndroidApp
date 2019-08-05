@@ -7,11 +7,11 @@
     tools:context=".Guardar">
 
     <TextView
-        android:id="@+id/backButtonText"
+        android:id="@+id/backButtonTextGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="24dp"
         android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
         android:fontFamily="@font/vg5000"

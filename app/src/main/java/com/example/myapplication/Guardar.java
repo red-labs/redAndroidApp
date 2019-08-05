@@ -22,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.TextView;
 
 public class Guardar extends AppCompatActivity {
 
@@ -29,5 +30,14 @@ public class Guardar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guardar);
+
+        /* Back button at the top of the pagee that goes back to the previous activity */
+        TextView textBack = findViewById(R.id.backButtonTextGuardar);
+        textBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
